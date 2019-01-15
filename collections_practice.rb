@@ -8,10 +8,10 @@ def begins_with_r(array)
     has_r
   end
 
-  def contain_a(["earth", "fire", "wind", "water", "heart"])
-    container = []
-    array each do |element|
-      container << element if element.is_a?(String)
-      end
-    container
+  def contain_a(array)
+  container = []
+  array.each do |element|
+    container << element if element.include?("a")
   end
+  container
+end
